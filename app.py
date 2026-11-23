@@ -5,7 +5,9 @@ import os
 
 app = Flask(__name__)
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "tasks.db")
+DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+os.makedirs(DATA_DIR, exist_ok=True)
+DB_PATH = os.path.join(DATA_DIR, "tasks.db")
 
 def get_db():
     conn = sqlite3.connect(DB_PATH)

@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+*.db
+*.backup
+data/
+app.py.save
+test.txt
+hello.sh
